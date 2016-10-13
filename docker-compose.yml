@@ -1,0 +1,10 @@
+version: '2'
+services:
+  pynotebooks:
+     build: .
+
+     volumes:
+        - ./notebooks:/jupyter
+
+     command:
+        jupyter-notebook --config=config.py
