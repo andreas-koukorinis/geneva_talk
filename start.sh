@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-docker-compose run -d -p "3340:9999" pynotebooks
+port=$1
+echo "http://localhost:$port/tree"
+
+port+=":9999"
+docker run -d -p $port talk
+
+
