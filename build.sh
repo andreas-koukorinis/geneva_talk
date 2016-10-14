@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t talk .
+docker-compose build pytalk

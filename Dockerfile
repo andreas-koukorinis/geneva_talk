@@ -21,6 +21,9 @@ RUN ipython profile create
 # install RISE-3.x
 RUN python /geneva_talk/RISE-3.x/setup.py install
 
-EXPOSE 9999
+#EXPOSE 9999
 
-CMD jupyter-notebook --config=config.py
+#CMD jupyter-notebook --config=config.py
+RUN rm -rf RISE-3.x && rm docker-compose.yml && rm Dockerfile
+
+

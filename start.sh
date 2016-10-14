@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 port=$1
-echo "http://localhost:$port/tree"
+host=":9999"
 
-port+=":9999"
-docker run -d -p $port talk
+docker-compose run -d -p $port$host pytalk
+google-chrome "http://localhost:$port/tree"
 
 
