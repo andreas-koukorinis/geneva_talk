@@ -4,7 +4,7 @@ services:
      build: .
 
      volumes:
-        - ./notebooks:/jupyter
+        - ./books:/jupyter
 
      command:
         jupyter-notebook --config=config.py

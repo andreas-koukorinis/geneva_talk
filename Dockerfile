@@ -5,10 +5,9 @@ FROM continuumio/miniconda3
 MAINTAINER Thomas Schmelzer "thomas.schmelzer@gmail.com"
 
 RUN conda install -q -y pandas=0.18.1 jupyter
-RUN mkdir jupyter
 
-ADD . /Geneva
-WORKDIR /Geneva
+ADD . /geneva_talk
+WORKDIR /geneva_talk
 
 # build the environment
 RUN conda install -y -q -c mosek mosek
