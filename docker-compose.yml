@@ -1,12 +1,10 @@
 version: '2'
 services:
   pytalk:
-     build:
-        context: .
-        dockerfile: Dockerfile
+     build: . 
      expose:
         - "9999"
      volumes:
-        - ./books:/jupyter
+        - .:/talk
      command: jupyter-notebook --config=config.py
 
