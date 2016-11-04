@@ -4,7 +4,5 @@ services:
      build: . 
      expose:
         - "9999"
-     volumes:
-        - .:/talk
      command: jupyter-notebook --config=config.py
 
